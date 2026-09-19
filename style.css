@@ -1,33 +1,50 @@
-/* =========================================
-   TERMINATOR THEME
-   CYBERDYNE ARCHIVES
-========================================= */
+/* ========================================= */
+/* TERMINATOR X HAMLET                       */
+/* CYBERDYNE LITERATURE ARCHIVES             */
+/* ========================================= */
 
 
 /* GLOBAL SETTINGS */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+
+    --background: #050505;
+
+    --panel: #101010;
+
+    --red: #ff2020;
+
+    --dark-red: #660000;
+
+    --text: #eeeeee;
+
+    --muted: #999999;
+
 }
 
-:root {
-    --background: #050505;
-    --panel: #101010;
-    --red: #ff2020;
-    --dark-red: #780000;
-    --text: #e5e5e5;
-    --muted: #888888;
-    --border: #4a1010;
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
 }
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
+
 body {
-    background-color: var(--background);
+
+    background: var(--background);
+
     color: var(--text);
 
     font-family: "Courier New", monospace;
@@ -35,264 +52,309 @@ body {
     min-height: 100vh;
 
     background-image:
-        linear-gradient(
-            rgba(255, 0, 0, 0.025) 1px,
-            transparent 1px
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(255, 0, 0, 0.025) 4px
         );
 
-    background-size: 100% 4px;
 }
 
 
-/* =========================================
-   SYSTEM HEADER
-========================================= */
+/* ========================================= */
+/* HEADER                                    */
+/* ========================================= */
 
-.system-header {
+.main-header {
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
-    padding: 25px 5%;
+    padding: 22px 5%;
 
-    background: #090909;
+    background: #080808;
 
     border-bottom: 1px solid var(--red);
 
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
 
 }
+
 
 .logo {
 
     color: var(--red);
 
-    font-size: 20px;
+    font-size: 18px;
+
     font-weight: bold;
 
     letter-spacing: 3px;
 
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    text-shadow: 0 0 10px var(--red);
 
 }
 
-.logo-icon {
-    font-size: 24px;
+
+.red-eye {
+
+    font-size: 25px;
+
     margin-right: 10px;
+
+    animation: pulse 2s infinite;
+
 }
+
 
 .system-status {
 
-    font-size: 12px;
+    color: var(--muted);
 
-    color: #bbbbbb;
+    font-size: 11px;
 
     letter-spacing: 2px;
 
-    display: flex;
-    align-items: center;
-
-    gap: 10px;
-
 }
 
-.status-dot {
+
+.status-light {
+
+    display: inline-block;
 
     width: 8px;
+
     height: 8px;
 
     background: var(--red);
 
     border-radius: 50%;
 
-    display: inline-block;
+    margin-right: 8px;
 
     box-shadow: 0 0 10px var(--red);
 
-    animation: blink 2s infinite;
+    animation: pulse 2s infinite;
 
 }
 
 
-/* =========================================
-   MAIN CONTAINER
-========================================= */
+/* ========================================= */
+/* HERO IMAGE                                */
+/* ========================================= */
 
-.container {
+.hero {
 
-    max-width: 1100px;
+    width: 100%;
 
-    margin: auto;
+    max-width: 1600px;
 
-    padding: 60px 25px;
+    margin: 0 auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-bottom: 2px solid var(--red);
+
+    box-shadow: 0 10px 50px rgba(255, 0, 0, 0.15);
 
 }
 
-.system-label {
+
+.hero-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+}
+
+
+.hero-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 18px 5%;
+
+    background: #100606;
 
     color: var(--red);
 
     font-size: 11px;
 
-    letter-spacing: 3px;
-
-    margin-bottom: 50px;
+    letter-spacing: 2px;
 
 }
 
 
-/* =========================================
-   TITLE SECTION
-========================================= */
+/* ========================================= */
+/* MAIN CONTAINER                            */
+/* ========================================= */
 
-.title-section {
+.container {
 
-    text-align: center;
+    max-width: 1100px;
 
-    padding: 30px 0 60px;
+    margin: 0 auto;
+
+    padding: 70px 25px;
 
 }
 
-.access-label {
+
+.system-text {
 
     color: var(--red);
-
-    letter-spacing: 5px;
 
     font-size: 12px;
 
-    margin-bottom: 20px;
+    letter-spacing: 3px;
 
-    animation: blink 3s infinite;
+    margin-bottom: 20px;
 
 }
 
-h1 {
 
-    font-size: clamp(55px, 12vw, 110px);
+/* ========================================= */
+/* INTRODUCTION                              */
+/* ========================================= */
 
-    letter-spacing: 12px;
+.introduction {
 
-    color: #eeeeee;
+    text-align: center;
+
+    padding: 30px 0 70px;
+
+}
+
+
+.introduction h1 {
+
+    font-size: clamp(55px, 12vw, 105px);
 
     font-weight: 900;
 
+    letter-spacing: 10px;
+
+    color: #eeeeee;
+
     text-shadow:
-        0 0 10px rgba(255, 0, 0, 0.5),
-        0 0 35px rgba(255, 0, 0, 0.3);
+        0 0 15px rgba(255, 0, 0, 0.5),
+        0 0 40px rgba(255, 0, 0, 0.3);
 
     margin-bottom: 20px;
 
 }
 
-h2 {
 
-    font-size: 18px;
-
-    font-weight: normal;
+.introduction h2 {
 
     color: var(--red);
 
-    letter-spacing: 3px;
+    font-size: 22px;
+
+    font-weight: normal;
+
+    letter-spacing: 4px;
 
 }
 
-h2 span {
 
-    display: block;
+.subtitle {
 
-    font-size: 13px;
-
-    margin-top: 12px;
+    margin-top: 20px;
 
     color: var(--muted);
 
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
 }
 
-.red-line {
 
-    width: 150px;
+.red-divider {
+
+    width: 180px;
 
     height: 2px;
 
     background: var(--red);
 
-    margin: 35px auto;
+    margin: 45px auto;
 
     box-shadow: 0 0 15px var(--red);
 
 }
 
 
-/* =========================================
-   AUTHOR SECTION
-========================================= */
+.author-info {
 
-.author-section {
-
-    margin-top: 40px;
+    margin-top: 35px;
 
 }
 
-.author-label {
 
-    font-size: 10px;
+.author-info h3 {
 
-    letter-spacing: 3px;
+    font-size: 24px;
 
-    color: var(--muted);
+    color: white;
+
+    font-weight: normal;
 
     margin-bottom: 15px;
 
 }
 
-.author-section h3 {
-
-    color: #ffffff;
-
-    font-size: 22px;
-
-    margin-bottom: 10px;
-
-    font-weight: normal;
-
-}
 
 .author-dates {
 
     color: var(--red);
 
-    font-size: 13px;
+    font-size: 14px;
 
     letter-spacing: 3px;
 
 }
 
 
-/* =========================================
-   SHARE BUTTONS
-========================================= */
+/* ========================================= */
+/* SHARING BUTTONS                           */
+/* ========================================= */
 
-.share-section {
+.sharing {
 
     margin-bottom: 60px;
 
 }
 
-.section-label {
+
+.section-heading {
 
     color: var(--red);
 
-    font-size: 12px;
+    font-size: 14px;
 
     letter-spacing: 3px;
 
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
 }
 
-.share-buttons {
+
+.button-container {
 
     display: flex;
 
@@ -302,21 +364,20 @@ h2 span {
 
 }
 
-.share-buttons button {
+
+.button-container button {
 
     background: #111111;
 
-    color: #cccccc;
+    color: #dddddd;
 
-    padding: 12px 18px;
+    padding: 14px 20px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--dark-red);
 
     font-family: "Courier New", monospace;
 
     font-size: 11px;
-
-    text-transform: uppercase;
 
     letter-spacing: 1px;
 
@@ -326,11 +387,12 @@ h2 span {
 
 }
 
-.share-buttons button:hover {
+
+.button-container button:hover {
 
     background: var(--red);
 
-    color: #000000;
+    color: black;
 
     border-color: var(--red);
 
@@ -340,50 +402,49 @@ h2 span {
 
 }
 
-.share-buttons button:focus-visible {
+
+.button-container button:focus-visible {
 
     outline: 2px solid var(--red);
 
-    outline-offset: 4px;
+    outline-offset: 3px;
 
 }
 
-.action-status {
+
+#system-message {
 
     color: var(--red);
 
     font-size: 12px;
 
-    margin-top: 15px;
+    margin-top: 20px;
 
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 
 }
 
-.action-status:empty {
-    display: none;
-}
 
-
-/* =========================================
-   POEM CONTAINER
-========================================= */
+/* ========================================= */
+/* POEM CONTAINER                            */
+/* ========================================= */
 
 .poem-container {
 
     background: var(--panel);
 
-    border: 1px solid var(--border);
-
-    box-shadow:
-        0 0 40px rgba(255, 0, 0, 0.08),
-        inset 0 0 30px rgba(255, 0, 0, 0.02);
+    border: 1px solid var(--dark-red);
 
     position: relative;
 
     overflow: hidden;
 
+    box-shadow:
+        0 0 40px rgba(255, 0, 0, 0.1),
+        inset 0 0 30px rgba(255, 0, 0, 0.02);
+
 }
+
 
 .poem-container::before {
 
@@ -392,9 +453,11 @@ h2 span {
     position: absolute;
 
     top: 0;
+
     left: 0;
 
     width: 100%;
+
     height: 3px;
 
     background: var(--red);
@@ -414,35 +477,19 @@ h2 span {
 
     align-items: center;
 
-    padding: 20px 30px;
+    gap: 15px;
 
-    background: #160909;
+    padding: 22px 30px;
 
-    border-bottom: 1px solid var(--border);
+    background: #180909;
+
+    border-bottom: 1px solid var(--dark-red);
+
+    color: var(--red);
 
     font-size: 11px;
 
     letter-spacing: 2px;
-
-    gap: 15px;
-
-}
-
-.poem-header-left {
-
-    color: var(--red);
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-}
-
-.poem-header-right {
-
-    color: var(--muted);
 
 }
 
@@ -451,23 +498,38 @@ h2 span {
 
 .poem-content {
 
-    padding: 50px 60px;
+    padding: 60px;
 
 }
 
-.poem-title {
 
-    color: var(--red);
+.poem-heading {
+
+    font-family: "Courier New", monospace;
+
+    font-size: 22px;
+
+    color: #ffffff;
 
     letter-spacing: 3px;
 
-    font-size: 12px;
-
     margin-bottom: 40px;
+
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 
 }
 
+
 .poem {
+
+    border-left: 2px solid var(--dark-red);
+
+    padding-left: 25px;
+
+}
+
+
+.verse {
 
     font-family: Georgia, "Times New Roman", serif;
 
@@ -477,21 +539,18 @@ h2 span {
 
     color: #dddddd;
 
-    padding-left: 25px;
+    white-space: pre-line;
 
-    border-left: 2px solid var(--dark-red);
-
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
+    overflow-wrap: break-word;
 
 }
 
-.poem::first-line {
+
+.verse::first-line {
 
     color: var(--red);
 
     font-weight: bold;
-
-    font-size: 21px;
 
 }
 
@@ -504,26 +563,67 @@ h2 span {
 
     justify-content: space-between;
 
-    padding: 20px 30px;
+    gap: 15px;
 
-    background: #160909;
+    padding: 22px 30px;
 
-    border-top: 1px solid var(--border);
+    background: #180909;
+
+    border-top: 1px solid var(--dark-red);
 
     color: var(--red);
 
-    font-size: 10px;
+    font-size: 11px;
 
     letter-spacing: 2px;
-
-    gap: 15px;
 
 }
 
 
-/* =========================================
-   WEBSITE FOOTER
-========================================= */
+/* ========================================= */
+/* FINAL MESSAGE                             */
+/* ========================================= */
+
+.final-message {
+
+    text-align: center;
+
+    padding: 100px 20px 50px;
+
+}
+
+
+.final-message p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    margin: 20px 0;
+
+}
+
+
+.final-message h2 {
+
+    color: var(--red);
+
+    font-size: clamp(25px, 5vw, 45px);
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 10px rgba(255, 0, 0, 0.7),
+        0 0 30px rgba(255, 0, 0, 0.4);
+
+}
+
+
+/* ========================================= */
+/* FOOTER                                    */
+/* ========================================= */
 
 footer {
 
@@ -539,11 +639,12 @@ footer {
 
 }
 
-.footer-line {
 
-    height: 1px;
+.footer-divider {
 
     max-width: 1100px;
+
+    height: 1px;
 
     margin: 0 auto 30px;
 
@@ -556,7 +657,8 @@ footer {
 
 }
 
-.footer-small {
+
+.footer-secondary {
 
     color: var(--red);
 
@@ -567,42 +669,55 @@ footer {
 }
 
 
-/* =========================================
-   ANIMATIONS
-========================================= */
+/* ========================================= */
+/* ANIMATIONS                                */
+/* ========================================= */
 
-@keyframes blink {
+@keyframes pulse {
 
     0% {
+
         opacity: 1;
+
+        text-shadow: 0 0 10px var(--red);
+
     }
 
     50% {
+
         opacity: 0.4;
+
+        text-shadow: 0 0 3px var(--red);
+
     }
 
     100% {
+
         opacity: 1;
+
+        text-shadow: 0 0 10px var(--red);
+
     }
 
 }
 
 
-/* =========================================
-   MOBILE RESPONSIVENESS
-========================================= */
+/* ========================================= */
+/* MOBILE RESPONSIVENESS                     */
+/* ========================================= */
 
 @media (max-width: 768px) {
 
-    .system-header {
-
-        padding: 20px;
+    .main-header {
 
         flex-direction: column;
 
         gap: 15px;
 
+        padding: 20px;
+
     }
+
 
     .logo {
 
@@ -612,13 +727,10 @@ footer {
 
     }
 
-    .container {
 
-        padding: 30px 15px;
+    .hero-bottom {
 
-    }
-
-    .system-label {
+        flex-direction: column;
 
         font-size: 9px;
 
@@ -626,29 +738,41 @@ footer {
 
     }
 
-    h1 {
 
-        letter-spacing: 5px;
+    .container {
 
-    }
-
-    h2 {
-
-        font-size: 15px;
+        padding: 40px 15px;
 
     }
 
-    .share-buttons {
+
+    .introduction h1 {
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .introduction h2 {
+
+        font-size: 17px;
+
+    }
+
+
+    .button-container {
 
         flex-direction: column;
 
     }
 
-    .share-buttons button {
+
+    .button-container button {
 
         width: 100%;
 
     }
+
 
     .poem-header {
 
@@ -656,7 +780,10 @@ footer {
 
         align-items: flex-start;
 
+        font-size: 9px;
+
     }
+
 
     .poem-content {
 
@@ -664,36 +791,60 @@ footer {
 
     }
 
+
+    .poem-heading {
+
+        font-size: 17px;
+
+        line-height: 1.6;
+
+    }
+
+
     .poem {
-
-        font-size: 16px;
-
-        line-height: 1.9;
 
         padding-left: 12px;
 
     }
 
-    .poem::first-line {
 
-        font-size: 17px;
+    .verse {
+
+        font-size: 16px;
+
+        line-height: 1.9;
 
     }
+
 
     .poem-footer {
 
         flex-direction: column;
 
-        line-height: 1.8;
+        font-size: 9px;
+
+    }
+
+
+    .final-message {
+
+        padding: 70px 10px 30px;
+
+    }
+
+
+    .final-message p {
+
+        letter-spacing: 2px;
 
     }
 
 }
 
 
-/* =========================================
-   PRINT MODE
-========================================= */
+/* ========================================= */
+/* PRINT MODE                                */
+/* ========================================= */
 
 @media print {
 
@@ -703,18 +854,19 @@ footer {
 
         color: black;
 
-        background-image: none;
-
     }
 
-    .system-header,
-    .system-label,
-    .share-section,
+
+    .main-header,
+    .hero,
+    .sharing,
+    .final-message,
     footer {
 
         display: none;
 
     }
+
 
     .container {
 
@@ -724,9 +876,17 @@ footer {
 
     }
 
-    h1,
-    h2,
-    h3,
+
+    .introduction {
+
+        padding: 0 0 20px;
+
+    }
+
+
+    .introduction h1,
+    .introduction h2,
+    .author-info h3,
     .author-dates {
 
         color: black;
@@ -735,30 +895,46 @@ footer {
 
     }
 
+
     .poem-container {
 
         border: none;
 
         box-shadow: none;
 
+        background: white;
+
     }
+
 
     .poem-header,
     .poem-footer,
-    .poem-title {
+    .poem-heading,
+    .system-text {
 
         display: none;
 
     }
 
+
     .poem-content {
 
-        padding: 20px 0;
+        padding: 0;
 
     }
 
-    .poem,
-    .poem::first-line {
+
+    .poem {
+
+        border: none;
+
+        padding: 0;
+
+    }
+
+
+    .verse,
+    .verse::first-line {
 
         color: black;
 
@@ -766,16 +942,14 @@ footer {
 
         line-height: 1.5;
 
-        text-shadow: none;
-
-        border: none;
-
     }
 
 }
 
 
-/* ACCESSIBILITY */
+/* ========================================= */
+/* ACCESSIBILITY                             */
+/* ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
