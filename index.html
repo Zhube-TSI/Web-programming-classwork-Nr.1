@@ -2,66 +2,104 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hamlet | Cyberdyne Archives</title>
+    <title>HAMLET | TERMINATOR EDITION</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <!-- SYSTEM HEADER -->
 
-    <header class="system-header">
+    <!-- ============================= -->
+    <!-- HEADER -->
+    <!-- ============================= -->
+
+    <header class="main-header">
 
         <div class="logo">
-            <span class="logo-icon">◉</span>
-            CYBERDYNE ARCHIVES
+            <span class="red-eye">◉</span>
+            CYBERDYNE SYSTEMS
         </div>
 
         <div class="system-status">
-            <span class="status-dot"></span>
+            <span class="status-light"></span>
             SYSTEM ONLINE
         </div>
 
     </header>
 
 
+    <!-- ============================= -->
+    <!-- HERO IMAGE -->
+    <!-- ============================= -->
+
+    <section class="hero">
+
+        <img
+            src="hamlet-terminator.png"
+            alt="Terminator-inspired Hamlet artwork featuring a futuristic Hamlet and Ophelia"
+            class="hero-image"
+        >
+
+        <div class="hero-bottom">
+
+            <span>
+                [ CLASSIFIED ARCHIVE ]
+            </span>
+
+            <span>
+                SKYNET // LITERATURE DIVISION
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ============================= -->
     <!-- MAIN CONTENT -->
+    <!-- ============================= -->
 
     <main class="container">
 
-        <div class="system-label">
-            CLASSIFIED LITERATURE DATABASE // FILE 001
-        </div>
 
+        <!-- INTRODUCTION -->
 
-        <!-- TITLE SECTION -->
+        <section class="introduction">
 
-        <section class="title-section">
+            <p class="system-text">
+                // ARCHIVE RECORD 001
+            </p>
 
-            <div class="access-label">
-                [ ACCESS GRANTED ]
-            </div>
-
-            <h1>HAMLET</h1>
+            <h1>
+                HAMLET
+            </h1>
 
             <h2>
                 Act III, Scene I
-                <span>[To be, or not to be]</span>
             </h2>
 
-            <div class="red-line"></div>
+            <p class="subtitle">
+                [ To be, or not to be ]
+            </p>
 
-            <div class="author-section">
+            <div class="red-divider"></div>
 
-                <div class="author-label">
+            <div class="author-info">
+
+                <p class="system-text">
                     AUTHOR IDENTIFICATION
-                </div>
+                </p>
 
-                <h3>William Shakespeare</h3>
+                <h3>
+                    William Shakespeare
+                </h3>
 
                 <p class="author-dates">
                     1564 – 1616
@@ -72,110 +110,118 @@
         </section>
 
 
+        <!-- ============================= -->
         <!-- SHARING OPTIONS -->
+        <!-- ============================= -->
 
-        <section class="share-section">
+        <section class="sharing">
 
-            <div class="section-label">
+            <h3 class="section-heading">
                 // TRANSMISSION OPTIONS
-            </div>
+            </h3>
 
-            <div class="share-buttons">
+            <div class="button-container">
 
                 <button onclick="sharePage('facebook')">
-                    Share on Facebook
+                    SHARE ON FACEBOOK
                 </button>
 
                 <button onclick="sharePage('twitter')">
-                    Share on Twitter
+                    SHARE ON TWITTER
                 </button>
 
                 <button onclick="sharePage('tumblr')">
-                    Share on Tumblr
+                    SHARE ON TUMBLR
                 </button>
 
                 <button onclick="window.print()">
-                    View print mode
+                    VIEW PRINT MODE
                 </button>
 
                 <button onclick="copyEmbedCode()">
-                    Copy embed code
+                    COPY EMBED CODE
                 </button>
 
                 <button onclick="addToAnthology()">
-                    Add this poem to an anthology
+                    ADD THIS POEM TO AN ANTHOLOGY
                 </button>
 
             </div>
 
-            <p id="action-status" class="action-status" role="status"></p>
+            <p id="system-message" role="status"></p>
 
         </section>
 
 
-        <!-- POEM -->
+        <!-- ============================= -->
+        <!-- HAMLET POEM -->
+        <!-- ============================= -->
 
         <article class="poem-container">
 
             <div class="poem-header">
 
-                <div class="poem-header-left">
-                    <span class="status-dot"></span>
+                <span>
+                    <span class="status-light"></span>
                     TEXT ARCHIVE // ACTIVE
-                </div>
+                </span>
 
-                <div class="poem-header-right">
+                <span>
                     FILE: HAMLET_003
-                </div>
+                </span>
 
             </div>
 
 
             <div class="poem-content">
 
-                <div class="poem-title">
+                <p class="system-text">
                     // THE SOLILOQUY
-                </div>
-
-                <p class="poem">
-
-                    To be, or not to be: that is the question:<br>
-                    Whether ’tis nobler in the mind to suffer<br>
-                    The slings and arrows of outrageous fortune,<br>
-                    Or to take arms against a sea of troubles,<br>
-                    And by opposing end them? To die: to sleep;<br>
-                    No more; and by a sleep to say we end<br>
-                    The heart-ache and the thousand natural shocks<br>
-                    That flesh is heir to, ’tis a consummation<br>
-                    Devoutly to be wish’d. To die, to sleep;<br>
-                    To sleep: perchance to dream: ay, there’s the rub;<br>
-                    For in that sleep of death what dreams may come<br>
-                    When we have shuffled off this mortal coil,<br>
-                    Must give us pause: there’s the respect<br>
-                    That makes calamity of so long life;<br>
-                    For who would bear the whips and scorns of time,<br>
-                    The oppressor’s wrong, the proud man’s contumely,<br>
-                    The pangs of despised love, the law’s delay,<br>
-                    The insolence of office and the spurns<br>
-                    That patient merit of the unworthy takes,<br>
-                    When he himself might his quietus make<br>
-                    With a bare bodkin? who would fardels bear,<br>
-                    To grunt and sweat under a weary life,<br>
-                    But that the dread of something after death,<br>
-                    The undiscover’d country from whose bourn<br>
-                    No traveller returns, puzzles the will<br>
-                    And makes us rather bear those ills we have<br>
-                    Than fly to others that we know not of?<br>
-                    Thus conscience does make cowards of us all;<br>
-                    And thus the native hue of resolution<br>
-                    Is sicklied o’er with the pale cast of thought,<br>
-                    And enterprises of great pith and moment<br>
-                    With this regard their currents turn awry,<br>
-                    And lose the name of action.—Soft you now!<br>
-                    The fair Ophelia! Nymph, in thy orisons<br>
-                    Be all my sins remember’d.
-
                 </p>
+
+                <h2 class="poem-heading">
+                    TO BE, OR NOT TO BE
+                </h2>
+
+                <div class="poem">
+
+                    <p class="verse">To be, or not to be: that is the question:
+Whether ’tis nobler in the mind to suffer
+The slings and arrows of outrageous fortune,
+Or to take arms against a sea of troubles,
+And by opposing end them? To die: to sleep;
+No more; and by a sleep to say we end
+The heart-ache and the thousand natural shocks
+That flesh is heir to, ’tis a consummation
+Devoutly to be wish’d. To die, to sleep;
+To sleep: perchance to dream: ay, there’s the rub;
+For in that sleep of death what dreams may come
+When we have shuffled off this mortal coil,
+Must give us pause: there’s the respect
+That makes calamity of so long life;
+For who would bear the whips and scorns of time,
+The oppressor’s wrong, the proud man’s contumely,
+The pangs of despised love, the law’s delay,
+The insolence of office and the spurns
+That patient merit of the unworthy takes,
+When he himself might his quietus make
+With a bare bodkin? who would fardels bear,
+To grunt and sweat under a weary life,
+But that the dread of something after death,
+The undiscover’d country from whose bourn
+No traveller returns, puzzles the will
+And makes us rather bear those ills we have
+Than fly to others that we know not of?
+Thus conscience does make cowards of us all;
+And thus the native hue of resolution
+Is sicklied o’er with the pale cast of thought,
+And enterprises of great pith and moment
+With this regard their currents turn awry,
+And lose the name of action.—Soft you now!
+The fair Ophelia! Nymph, in thy orisons
+Be all my sins remember’d.</p>
+
+                </div>
 
             </div>
 
@@ -194,59 +240,95 @@
 
         </article>
 
+
+        <!-- ============================= -->
+        <!-- FINAL MESSAGE -->
+        <!-- ============================= -->
+
+        <section class="final-message">
+
+            <p>
+                HUMANITY IS TEMPORARY.
+            </p>
+
+            <h2>
+                TO BE OR NOT TO BE.
+            </h2>
+
+            <p>
+                THE MACHINE REMEMBERS.
+            </p>
+
+        </section>
+
+
     </main>
 
 
-    <!-- WEBSITE FOOTER -->
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
 
     <footer>
 
-        <div class="footer-line"></div>
+        <div class="footer-divider"></div>
 
         <p>
-            CYBERDYNE ARCHIVES // LITERATURE DATABASE
+            CYBERDYNE SYSTEMS // LITERATURE ARCHIVES
         </p>
 
-        <p class="footer-small">
-            HAMLET // WILLIAM SHAKESPEARE // SYSTEM ONLINE
+        <p class="footer-secondary">
+            HAMLET // WILLIAM SHAKESPEARE
+        </p>
+
+        <p class="footer-secondary">
+            SYSTEM STATUS: ONLINE
         </p>
 
     </footer>
 
 
-    <!-- BUTTON FUNCTIONALITY -->
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
 
     <script>
 
         function sharePage(platform) {
 
-            const pageURL = encodeURIComponent(window.location.href);
+            const url = encodeURIComponent(window.location.href);
+
             const title = encodeURIComponent(
-                "Hamlet, Act III, Scene I - William Shakespeare"
+                "Hamlet - William Shakespeare"
             );
 
             let shareURL = "";
 
             if (platform === "facebook") {
+
                 shareURL =
-                    "https://www.facebook.com/sharer/sharer.php?u=" +
-                    pageURL;
+                    "https://www.facebook.com/sharer/sharer.php?u=" + url;
+
             }
 
             if (platform === "twitter") {
+
                 shareURL =
                     "https://twitter.com/intent/tweet?url=" +
-                    pageURL +
+                    url +
                     "&text=" +
                     title;
+
             }
 
             if (platform === "tumblr") {
+
                 shareURL =
                     "https://www.tumblr.com/widgets/share/tool?canonicalUrl=" +
-                    pageURL +
+                    url +
                     "&title=" +
                     title;
+
             }
 
             window.open(
@@ -260,10 +342,9 @@
 
         async function copyEmbedCode() {
 
-            const pageURL = window.location.href;
-
             const embedCode =
-                '<iframe src="' + pageURL +
+                '<iframe src="' +
+                window.location.href +
                 '" width="800" height="600" ' +
                 'title="Hamlet - William Shakespeare"></iframe>';
 
@@ -271,13 +352,12 @@
 
                 await navigator.clipboard.writeText(embedCode);
 
-                document.getElementById("action-status").textContent =
-                    "EMBED CODE COPIED TO CLIPBOARD";
+                showMessage("EMBED CODE COPIED");
 
             } catch (error) {
 
                 window.prompt(
-                    "Copy the following embed code:",
+                    "Copy the embed code:",
                     embedCode
                 );
 
@@ -295,19 +375,27 @@
                     "Hamlet, Act III, Scene I - William Shakespeare"
                 );
 
-                document.getElementById("action-status").textContent =
-                    "POEM SAVED TO LOCAL ANTHOLOGY";
+                showMessage("POEM SAVED TO LOCAL ANTHOLOGY");
 
             } catch (error) {
 
-                document.getElementById("action-status").textContent =
-                    "LOCAL STORAGE IS UNAVAILABLE";
+                showMessage("LOCAL STORAGE UNAVAILABLE");
 
             }
 
         }
 
+
+        function showMessage(message) {
+
+            document.getElementById(
+                "system-message"
+            ).textContent = message;
+
+        }
+
     </script>
+
 
 </body>
 
