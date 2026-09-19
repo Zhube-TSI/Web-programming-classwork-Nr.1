@@ -1,13 +1,10 @@
 /* ==========================================
    SHAKESPEARE: THE GALACTIC ARCHIVES
    STAR WARS THEME
-   STYLESHEET: style2.css
 ========================================== */
 
 
-/* ==========================================
-   1. GLOBAL SETTINGS
-========================================== */
+/* GLOBAL SETTINGS */
 
 :root {
     --background: #02040b;
@@ -18,7 +15,6 @@
     --blue-glow: #007bff;
 
     --gold: #ffe81f;
-    --gold-dark: #bda619;
 
     --text: #f0f0f0;
     --muted: #a1a9ba;
@@ -40,36 +36,12 @@ body {
     background-color: var(--background);
 
     background-image:
-        radial-gradient(
-            1px 1px at 10% 15%,
-            white,
-            transparent
-        ),
-        radial-gradient(
-            1px 1px at 25% 65%,
-            white,
-            transparent
-        ),
-        radial-gradient(
-            2px 2px at 60% 30%,
-            white,
-            transparent
-        ),
-        radial-gradient(
-            1px 1px at 85% 80%,
-            white,
-            transparent
-        ),
-        radial-gradient(
-            1px 1px at 45% 90%,
-            white,
-            transparent
-        ),
-        radial-gradient(
-            ellipse at top,
-            #101c38,
-            #02040b 70%
-        );
+        radial-gradient(1px 1px at 10% 15%, white, transparent),
+        radial-gradient(1px 1px at 25% 65%, white, transparent),
+        radial-gradient(2px 2px at 60% 30%, white, transparent),
+        radial-gradient(1px 1px at 85% 80%, white, transparent),
+        radial-gradient(1px 1px at 45% 90%, white, transparent),
+        radial-gradient(ellipse at top, #101c38, #02040b 70%);
 
     background-size:
         300px 300px,
@@ -89,9 +61,7 @@ body {
 }
 
 
-/* ==========================================
-   2. HEADER
-========================================== */
+/* HEADER */
 
 .main-header {
     display: flex;
@@ -104,8 +74,7 @@ body {
 
     border-bottom: 1px solid var(--gold);
 
-    box-shadow:
-        0 0 20px rgba(255, 232, 31, 0.12);
+    box-shadow: 0 0 20px rgba(255, 232, 31, 0.12);
 
     position: relative;
     z-index: 10;
@@ -123,8 +92,7 @@ body {
 
     text-decoration: none;
 
-    text-shadow:
-        0 0 12px rgba(255, 232, 31, 0.4);
+    text-shadow: 0 0 12px rgba(255, 232, 31, 0.4);
 }
 
 .logo-symbol {
@@ -161,14 +129,11 @@ body {
 .navigation a:hover {
     color: var(--gold);
 
-    text-shadow:
-        0 0 12px var(--gold);
+    text-shadow: 0 0 12px var(--gold);
 }
 
 
-/* ==========================================
-   3. HERO SECTION
-========================================== */
+/* HERO SECTION */
 
 .hero {
     display: grid;
@@ -183,12 +148,8 @@ body {
 
     border-bottom: 1px solid var(--border);
 
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
-
-
-/* HERO TEXT */
 
 .hero-content {
     display: flex;
@@ -274,8 +235,7 @@ body {
 
     margin-top: 40px;
 
-    text-shadow:
-        0 0 12px rgba(76, 201, 255, 0.4);
+    text-shadow: 0 0 12px rgba(76, 201, 255, 0.4);
 }
 
 .hero-quote {
@@ -293,8 +253,7 @@ body {
 
     border-left: 3px solid var(--blue);
 
-    text-shadow:
-        0 0 20px rgba(76, 201, 255, 0.2);
+    text-shadow: 0 0 20px rgba(76, 201, 255, 0.2);
 }
 
 .hero-description {
@@ -308,9 +267,6 @@ body {
 
     margin-top: 30px;
 }
-
-
-/* HERO BUTTON */
 
 .hero-button {
     display: inline-flex;
@@ -339,8 +295,7 @@ body {
 
     transition: all 0.3s ease;
 
-    box-shadow:
-        0 0 15px rgba(0, 123, 255, 0.15);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.15);
 }
 
 .hero-button:hover {
@@ -368,9 +323,7 @@ body {
 }
 
 
-/* ==========================================
-   4. SHAKESPEARE IMAGE
-========================================== */
+/* SHAKESPEARE IMAGE */
 
 .hero-image-container {
     position: relative;
@@ -383,8 +336,7 @@ body {
 
     border-left: 1px solid var(--blue);
 
-    box-shadow:
-        -10px 0 40px rgba(0, 123, 255, 0.12);
+    box-shadow: -10px 0 40px rgba(0, 123, 255, 0.12);
 }
 
 .hero-image {
@@ -434,9 +386,7 @@ body {
 }
 
 
-/* ==========================================
-   5. SECTION DIVIDER
-========================================== */
+/* SECTION DIVIDER */
 
 .section-divider {
     max-width: 1000px;
@@ -455,9 +405,7 @@ body {
 }
 
 
-/* ==========================================
-   6. GENERAL SECTIONS
-========================================== */
+/* GENERAL SECTIONS */
 
 .author-section,
 .sharing-section,
@@ -494,14 +442,11 @@ body {
 
     margin-bottom: 40px;
 
-    text-shadow:
-        0 0 20px rgba(255, 232, 31, 0.15);
+    text-shadow: 0 0 20px rgba(255, 232, 31, 0.15);
 }
 
 
-/* ==========================================
-   7. AUTHOR SECTION
-========================================== */
+/* AUTHOR SECTION */
 
 .author-card {
     display: flex;
@@ -523,8 +468,7 @@ body {
 
     border-left: 3px solid var(--blue);
 
-    box-shadow:
-        0 0 35px rgba(0, 123, 255, 0.08);
+    box-shadow: 0 0 35px rgba(0, 123, 255, 0.08);
 }
 
 .author-symbol {
@@ -545,8 +489,7 @@ body {
 
     font-size: 55px;
 
-    text-shadow:
-        0 0 20px rgba(255, 232, 31, 0.3);
+    text-shadow: 0 0 20px rgba(255, 232, 31, 0.3);
 }
 
 .author-label {
@@ -588,9 +531,7 @@ body {
 }
 
 
-/* ==========================================
-   8. SHARING BUTTONS
-========================================== */
+/* SHARING BUTTONS */
 
 .share-buttons {
     display: flex;
@@ -627,8 +568,7 @@ body {
 
     border-color: var(--gold);
 
-    box-shadow:
-        0 0 20px rgba(255, 232, 31, 0.35);
+    box-shadow: 0 0 20px rgba(255, 232, 31, 0.35);
 
     transform: translateY(-2px);
 }
@@ -653,9 +593,7 @@ body {
 }
 
 
-/* ==========================================
-   9. POEM SECTION
-========================================== */
+/* POEM SECTION */
 
 .poem-introduction {
     color: var(--muted);
@@ -676,12 +614,8 @@ body {
 
     overflow: hidden;
 
-    box-shadow:
-        0 0 50px rgba(0, 123, 255, 0.1);
+    box-shadow: 0 0 50px rgba(0, 123, 255, 0.1);
 }
-
-
-/* POEM HEADER */
 
 .poem-header {
     display: flex;
@@ -705,9 +639,6 @@ body {
     letter-spacing: 2px;
 }
 
-
-/* POEM CONTENT */
-
 .poem-content {
     padding: 65px 60px;
 
@@ -728,8 +659,7 @@ body {
 
     margin-bottom: 25px;
 
-    text-shadow:
-        0 0 15px var(--blue);
+    text-shadow: 0 0 15px var(--blue);
 }
 
 .poem-content h3 {
@@ -765,12 +695,8 @@ body {
 
     background: var(--blue);
 
-    box-shadow:
-        0 0 15px var(--blue);
+    box-shadow: 0 0 15px var(--blue);
 }
-
-
-/* SHAKESPEARE TEXT */
 
 .poem-text {
     max-width: 750px;
@@ -810,9 +736,6 @@ body {
     margin-top: 50px;
 }
 
-
-/* POEM FOOTER */
-
 .poem-footer {
     display: flex;
 
@@ -836,9 +759,7 @@ body {
 }
 
 
-/* ==========================================
-   10. FINAL SECTION
-========================================== */
+/* FINAL SECTION */
 
 .final-section {
     text-align: center;
@@ -860,8 +781,7 @@ body {
 
     margin-bottom: 35px;
 
-    text-shadow:
-        0 0 20px var(--blue);
+    text-shadow: 0 0 20px var(--blue);
 }
 
 .final-small {
@@ -893,8 +813,7 @@ body {
 .final-section h2 span {
     color: var(--gold);
 
-    text-shadow:
-        0 0 20px rgba(255, 232, 31, 0.3);
+    text-shadow: 0 0 20px rgba(255, 232, 31, 0.3);
 }
 
 .final-description {
@@ -936,14 +855,11 @@ body {
 
     color: #02040b;
 
-    box-shadow:
-        0 0 20px var(--blue);
+    box-shadow: 0 0 20px var(--blue);
 }
 
 
-/* ==========================================
-   11. FOOTER
-========================================== */
+/* FOOTER */
 
 footer {
     padding: 45px 20px;
@@ -986,15 +902,12 @@ footer {
 }
 
 
-/* ==========================================
-   12. MOBILE RESPONSIVENESS
-========================================== */
+/* MOBILE RESPONSIVENESS */
 
 @media (max-width: 900px) {
 
     .hero {
         grid-template-columns: 1fr;
-
         min-height: auto;
     }
 
@@ -1004,38 +917,29 @@ footer {
 
     .hero-image-container {
         border-left: none;
-
         border-top: 1px solid var(--blue);
-
         box-shadow: none;
     }
 
     .hero-image {
         height: auto;
-
         min-height: 0;
-
         object-fit: contain;
     }
 
 }
 
-
 @media (max-width: 600px) {
 
     .main-header {
         flex-direction: column;
-
         gap: 25px;
-
         padding: 25px 15px;
     }
 
     .navigation {
         flex-wrap: wrap;
-
         justify-content: center;
-
         gap: 20px;
     }
 
@@ -1045,13 +949,11 @@ footer {
 
     .hero-content h1 {
         font-size: 48px;
-
         letter-spacing: 3px;
     }
 
     .hero-subtitle {
         font-size: 11px;
-
         letter-spacing: 2px;
     }
 
@@ -1061,7 +963,6 @@ footer {
 
     .image-caption {
         font-size: 8px;
-
         letter-spacing: 1px;
     }
 
@@ -1073,11 +974,8 @@ footer {
 
     .author-card {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 25px;
-
         padding: 25px;
     }
 
@@ -1092,7 +990,6 @@ footer {
     .poem-header,
     .poem-footer {
         flex-direction: column;
-
         font-size: 9px;
     }
 
@@ -1102,9 +999,7 @@ footer {
 
     .poem-text {
         font-size: 16px;
-
         line-height: 1.9;
-
         padding-left: 12px;
     }
 
@@ -1119,15 +1014,12 @@ footer {
 }
 
 
-/* ==========================================
-   13. PRINT MODE
-========================================== */
+/* PRINT MODE */
 
 @media print {
 
     body {
         background: white;
-
         color: black;
     }
 
@@ -1150,9 +1042,7 @@ footer {
     .author-card,
     .poem-container {
         background: white;
-
         border: none;
-
         box-shadow: none;
     }
 
@@ -1172,27 +1062,21 @@ footer {
 
     .poem-content {
         padding: 10px;
-
         background: white;
     }
 
     .poem-text,
     .poem-text::first-line {
         color: black;
-
         font-size: 12pt;
-
         line-height: 1.5;
-
         border: none;
     }
 
 }
 
 
-/* ==========================================
-   14. ACCESSIBILITY
-========================================== */
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1200,7 +1084,6 @@ footer {
     *::before,
     *::after {
         scroll-behavior: auto !important;
-
         transition: none !important;
     }
 
