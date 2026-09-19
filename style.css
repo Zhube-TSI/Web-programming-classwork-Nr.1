@@ -1,21 +1,794 @@
+/* =========================================
+   TERMINATOR THEME
+   CYBERDYNE ARCHIVES
+========================================= */
+
+
+/* GLOBAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #050505;
+    --panel: #101010;
+    --red: #ff2020;
+    --dark-red: #780000;
+    --text: #e5e5e5;
+    --muted: #888888;
+    --border: #4a1010;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333333;
-    margin: 40px;
+    background-color: var(--background);
+    color: var(--text);
+
+    font-family: "Courier New", monospace;
+
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 0, 0, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 100% 4px;
+}
+
+
+/* =========================================
+   SYSTEM HEADER
+========================================= */
+
+.system-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 5%;
+
+    background: #090909;
+
+    border-bottom: 1px solid var(--red);
+
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+
+}
+
+.logo {
+
+    color: var(--red);
+
+    font-size: 20px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+
+}
+
+.logo-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.system-status {
+
+    font-size: 12px;
+
+    color: #bbbbbb;
+
+    letter-spacing: 2px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+.status-dot {
+
+    width: 8px;
+    height: 8px;
+
+    background: var(--red);
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+    box-shadow: 0 0 10px var(--red);
+
+    animation: blink 2s infinite;
+
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 25px;
+
+}
+
+.system-label {
+
+    color: var(--red);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 50px;
+
+}
+
+
+/* =========================================
+   TITLE SECTION
+========================================= */
+
+.title-section {
+
+    text-align: center;
+
+    padding: 30px 0 60px;
+
+}
+
+.access-label {
+
+    color: var(--red);
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+
+    animation: blink 3s infinite;
+
 }
 
 h1 {
-    color: #2c3e50;
-    text-align: center;
+
+    font-size: clamp(55px, 12vw, 110px);
+
+    letter-spacing: 12px;
+
+    color: #eeeeee;
+
+    font-weight: 900;
+
+    text-shadow:
+        0 0 10px rgba(255, 0, 0, 0.5),
+        0 0 35px rgba(255, 0, 0, 0.3);
+
+    margin-bottom: 20px;
+
 }
 
 h2 {
-    color: #555555;
-    text-align: center;
+
+    font-size: 18px;
+
+    font-weight: normal;
+
+    color: var(--red);
+
+    letter-spacing: 3px;
+
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
+h2 span {
+
+    display: block;
+
+    font-size: 13px;
+
+    margin-top: 12px;
+
+    color: var(--muted);
+
+}
+
+.red-line {
+
+    width: 150px;
+
+    height: 2px;
+
+    background: var(--red);
+
+    margin: 35px auto;
+
+    box-shadow: 0 0 15px var(--red);
+
+}
+
+
+/* =========================================
+   AUTHOR SECTION
+========================================= */
+
+.author-section {
+
+    margin-top: 40px;
+
+}
+
+.author-label {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--muted);
+
+    margin-bottom: 15px;
+
+}
+
+.author-section h3 {
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+
+    font-weight: normal;
+
+}
+
+.author-dates {
+
+    color: var(--red);
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =========================================
+   SHARE BUTTONS
+========================================= */
+
+.share-section {
+
+    margin-bottom: 60px;
+
+}
+
+.section-label {
+
+    color: var(--red);
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+}
+
+.share-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+.share-buttons button {
+
+    background: #111111;
+
+    color: #cccccc;
+
+    padding: 12px 18px;
+
+    border: 1px solid var(--border);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+.share-buttons button:hover {
+
+    background: var(--red);
+
+    color: #000000;
+
+    border-color: var(--red);
+
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+
+    transform: translateY(-2px);
+
+}
+
+.share-buttons button:focus-visible {
+
+    outline: 2px solid var(--red);
+
+    outline-offset: 4px;
+
+}
+
+.action-status {
+
+    color: var(--red);
+
+    font-size: 12px;
+
+    margin-top: 15px;
+
+    letter-spacing: 1px;
+
+}
+
+.action-status:empty {
+    display: none;
+}
+
+
+/* =========================================
+   POEM CONTAINER
+========================================= */
+
+.poem-container {
+
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 0 40px rgba(255, 0, 0, 0.08),
+        inset 0 0 30px rgba(255, 0, 0, 0.02);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.poem-container::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--red);
+
+    box-shadow: 0 0 20px var(--red);
+
+}
+
+
+/* POEM HEADER */
+
+.poem-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 30px;
+
+    background: #160909;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    gap: 15px;
+
+}
+
+.poem-header-left {
+
+    color: var(--red);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+.poem-header-right {
+
+    color: var(--muted);
+
+}
+
+
+/* POEM CONTENT */
+
+.poem-content {
+
+    padding: 50px 60px;
+
+}
+
+.poem-title {
+
+    color: var(--red);
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+
+    margin-bottom: 40px;
+
+}
+
+.poem {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 19px;
+
+    line-height: 2.1;
+
+    color: #dddddd;
+
+    padding-left: 25px;
+
+    border-left: 2px solid var(--dark-red);
+
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
+
+}
+
+.poem::first-line {
+
+    color: var(--red);
+
+    font-weight: bold;
+
+    font-size: 21px;
+
+}
+
+
+/* POEM FOOTER */
+
+.poem-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 20px 30px;
+
+    background: #160909;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--red);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    gap: 15px;
+
+}
+
+
+/* =========================================
+   WEBSITE FOOTER
+========================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+.footer-line {
+
+    height: 1px;
+
+    max-width: 1100px;
+
+    margin: 0 auto 30px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--red),
+        transparent
+    );
+
+}
+
+.footer-small {
+
+    color: var(--red);
+
+    font-size: 10px;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+
+    .system-header {
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+    .logo {
+
+        font-size: 15px;
+
+        letter-spacing: 1px;
+
+    }
+
+    .container {
+
+        padding: 30px 15px;
+
+    }
+
+    .system-label {
+
+        font-size: 9px;
+
+        line-height: 1.8;
+
+    }
+
+    h1 {
+
+        letter-spacing: 5px;
+
+    }
+
+    h2 {
+
+        font-size: 15px;
+
+    }
+
+    .share-buttons {
+
+        flex-direction: column;
+
+    }
+
+    .share-buttons button {
+
+        width: 100%;
+
+    }
+
+    .poem-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .poem-content {
+
+        padding: 35px 20px;
+
+    }
+
+    .poem {
+
+        font-size: 16px;
+
+        line-height: 1.9;
+
+        padding-left: 12px;
+
+    }
+
+    .poem::first-line {
+
+        font-size: 17px;
+
+    }
+
+    .poem-footer {
+
+        flex-direction: column;
+
+        line-height: 1.8;
+
+    }
+
+}
+
+
+/* =========================================
+   PRINT MODE
+========================================= */
+
+@media print {
+
+    body {
+
+        background: white;
+
+        color: black;
+
+        background-image: none;
+
+    }
+
+    .system-header,
+    .system-label,
+    .share-section,
+    footer {
+
+        display: none;
+
+    }
+
+    .container {
+
+        max-width: 100%;
+
+        padding: 0;
+
+    }
+
+    h1,
+    h2,
+    h3,
+    .author-dates {
+
+        color: black;
+
+        text-shadow: none;
+
+    }
+
+    .poem-container {
+
+        border: none;
+
+        box-shadow: none;
+
+    }
+
+    .poem-header,
+    .poem-footer,
+    .poem-title {
+
+        display: none;
+
+    }
+
+    .poem-content {
+
+        padding: 20px 0;
+
+    }
+
+    .poem,
+    .poem::first-line {
+
+        color: black;
+
+        font-size: 12pt;
+
+        line-height: 1.5;
+
+        text-shadow: none;
+
+        border: none;
+
+    }
+
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
 }
