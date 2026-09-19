@@ -1,17 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamlet - William Shakespeare</title>
+
+    <title>Hamlet | Cyberdyne Archives</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Hamlet, Act III, Scene I</h1>
-    <h2>William Shakespeare</h2>
+    <!-- SYSTEM HEADER -->
 
-    <p>To be, or not to be: that is the question:</p>
+    <header class="system-header">
+
+        <div class="logo">
+            <span class="logo-icon">◉</span>
+            CYBERDYNE ARCHIVES
+        </div>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+        <div class="system-label">
+            CLASSIFIED LITERATURE DATABASE // FILE 001
+        </div>
+
+
+        <!-- TITLE SECTION -->
+
+        <section class="title-section">
+
+            <div class="access-label">
+                [ ACCESS GRANTED ]
+            </div>
+
+            <h1>HAMLET</h1>
+
+            <h2>
+                Act III, Scene I
+                <span>[To be, or not to be]</span>
+            </h2>
+
+            <div class="red-line"></div>
+
+            <div class="author-section">
+
+                <div class="author-label">
+                    AUTHOR IDENTIFICATION
+                </div>
+
+                <h3>William Shakespeare</h3>
+
+                <p class="author-dates">
+                    1564 – 1616
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SHARING OPTIONS -->
+
+        <section class="share-section">
+
+            <div class="section-label">
+                // TRANSMISSION OPTIONS
+            </div>
+
+            <div class="share-buttons">
+
+                <button onclick="sharePage('facebook')">
+                    Share on Facebook
+                </button>
+
+                <button onclick="sharePage('twitter')">
+                    Share on Twitter
+                </button>
+
+                <button onclick="sharePage('tumblr')">
+                    Share on Tumblr
+                </button>
+
+                <button onclick="window.print()">
+                    View print mode
+                </button>
+
+                <button onclick="copyEmbedCode()">
+                    Copy embed code
+                </button>
+
+                <button onclick="addToAnthology()">
+                    Add this poem to an anthology
+                </button>
+
+            </div>
+
+            <p id="action-status" class="action-status" role="status"></p>
+
+        </section>
+
+
+        <!-- POEM -->
+
+        <article class="poem-container">
+
+            <div class="poem-header">
+
+                <div class="poem-header-left">
+                    <span class="status-dot"></span>
+                    TEXT ARCHIVE // ACTIVE
+                </div>
+
+                <div class="poem-header-right">
+                    FILE: HAMLET_003
+                </div>
+
+            </div>
+
+
+            <div class="poem-content">
+
+                <div class="poem-title">
+                    // THE SOLILOQUY
+                </div>
+
+                <p class="poem">
+
+                    To be, or not to be: that is the question:<br>
+                    Whether ’tis nobler in the mind to suffer<br>
+                    The slings and arrows of outrageous fortune,<br>
+                    Or to take arms against a sea of troubles,<br>
+                    And by opposing end them? To die: to sleep;<br>
+                    No more; and by a sleep to say we end<br>
+                    The heart-ache and the thousand natural shocks<br>
+                    That flesh is heir to, ’tis a consummation<br>
+                    Devoutly to be wish’d. To die, to sleep;<br>
+                    To sleep: perchance to dream: ay, there’s the rub;<br>
+                    For in that sleep of death what dreams may come<br>
+                    When we have shuffled off this mortal coil,<br>
+                    Must give us pause: there’s the respect<br>
+                    That makes calamity of so long life;<br>
+                    For who would bear the whips and scorns of time,<br>
+                    The oppressor’s wrong, the proud man’s contumely,<br>
+                    The pangs of despised love, the law’s delay,<br>
+                    The insolence of office and the spurns<br>
+                    That patient merit of the unworthy takes,<br>
+                    When he himself might his quietus make<br>
+                    With a bare bodkin? who would fardels bear,<br>
+                    To grunt and sweat under a weary life,<br>
+                    But that the dread of something after death,<br>
+                    The undiscover’d country from whose bourn<br>
+                    No traveller returns, puzzles the will<br>
+                    And makes us rather bear those ills we have<br>
+                    Than fly to others that we know not of?<br>
+                    Thus conscience does make cowards of us all;<br>
+                    And thus the native hue of resolution<br>
+                    Is sicklied o’er with the pale cast of thought,<br>
+                    And enterprises of great pith and moment<br>
+                    With this regard their currents turn awry,<br>
+                    And lose the name of action.—Soft you now!<br>
+                    The fair Ophelia! Nymph, in thy orisons<br>
+                    Be all my sins remember’d.
+
+                </p>
+
+            </div>
+
+
+            <div class="poem-footer">
+
+                <span>
+                    END OF TRANSMISSION
+                </span>
+
+                <span>
+                    [ ARCHIVE COMPLETE ]
+                </span>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <!-- WEBSITE FOOTER -->
+
+    <footer>
+
+        <div class="footer-line"></div>
+
+        <p>
+            CYBERDYNE ARCHIVES // LITERATURE DATABASE
+        </p>
+
+        <p class="footer-small">
+            HAMLET // WILLIAM SHAKESPEARE // SYSTEM ONLINE
+        </p>
+
+    </footer>
+
+
+    <!-- BUTTON FUNCTIONALITY -->
+
+    <script>
+
+        function sharePage(platform) {
+
+            const pageURL = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(
+                "Hamlet, Act III, Scene I - William Shakespeare"
+            );
+
+            let shareURL = "";
+
+            if (platform === "facebook") {
+                shareURL =
+                    "https://www.facebook.com/sharer/sharer.php?u=" +
+                    pageURL;
+            }
+
+            if (platform === "twitter") {
+                shareURL =
+                    "https://twitter.com/intent/tweet?url=" +
+                    pageURL +
+                    "&text=" +
+                    title;
+            }
+
+            if (platform === "tumblr") {
+                shareURL =
+                    "https://www.tumblr.com/widgets/share/tool?canonicalUrl=" +
+                    pageURL +
+                    "&title=" +
+                    title;
+            }
+
+            window.open(
+                shareURL,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+        }
+
+
+        async function copyEmbedCode() {
+
+            const pageURL = window.location.href;
+
+            const embedCode =
+                '<iframe src="' + pageURL +
+                '" width="800" height="600" ' +
+                'title="Hamlet - William Shakespeare"></iframe>';
+
+            try {
+
+                await navigator.clipboard.writeText(embedCode);
+
+                document.getElementById("action-status").textContent =
+                    "EMBED CODE COPIED TO CLIPBOARD";
+
+            } catch (error) {
+
+                window.prompt(
+                    "Copy the following embed code:",
+                    embedCode
+                );
+
+            }
+
+        }
+
+
+        function addToAnthology() {
+
+            try {
+
+                localStorage.setItem(
+                    "hamlet-anthology",
+                    "Hamlet, Act III, Scene I - William Shakespeare"
+                );
+
+                document.getElementById("action-status").textContent =
+                    "POEM SAVED TO LOCAL ANTHOLOGY";
+
+            } catch (error) {
+
+                document.getElementById("action-status").textContent =
+                    "LOCAL STORAGE IS UNAVAILABLE";
+
+            }
+
+        }
+
+    </script>
 
 </body>
+
 </html>
